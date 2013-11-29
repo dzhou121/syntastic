@@ -130,6 +130,7 @@ command! SyntasticSetLoclist call g:SyntasticLoclist.current().setloclist()
 augroup syntastic
     autocmd BufReadPost * call s:BufReadPostHook()
     autocmd BufWritePost * call s:BufWritePostHook()
+    autocmd InsertLeave * call s:BufWritePostHook()
 
     autocmd BufWinEnter * call s:BufWinEnterHook()
 
